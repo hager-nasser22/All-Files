@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Serif+Georgian:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Algeria";
+            src: url(./Algeria-mZ9.ttf);
+        }
+        canvas {
+            margin: auto;
+            border: 6px solid red;
+            border-radius: 20px ;
+        }
+        body p:first-of-type{
+            font-family: "Algeria", serif;
+            font-weight: 600;
+            font-size: 50px;
+            position: absolute;
+            top:0;
+            left :3%;
+        }
+        p:last-of-type{
+            font-family: "Algeria", serif;
+            font-weight: 600;
+            font-size: 50px;
+            position: absolute;
+            top:50%;
+            left :26%;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas>
+        
+    </canvas>
+    <p>A</p>
+    <p>A</p>
+    <script>
+        const color = document.getElementById("color");
+        const canvas = document.querySelector("canvas");
+        const context = canvas.getContext("2d");
+        canvas.width = 500;
+        canvas.height = 500;
+        const x = canvas.width / 2;
+        const y = canvas.height / 2;
+        context.beginPath();
+        context.moveTo(x, y-25);
+        context.lineTo(x - 20, y + 50);
+        context.lineTo(x + 20, y + 50);
+        context.closePath();
+        context.fill();
+        context.beginPath();
+        context.arc(x-30,y,30,0,Math.PI * 2,true);
+        context.fill();
+        context.closePath();
+        context.beginPath();
+        context.arc(x+30,y,30,0,Math.PI * 2,true);
+        context.fill();
+        context.closePath();
+        context.beginPath();
+        context.moveTo(x, y-90);
+        context.lineTo(x - 57, y-14 );
+        context.lineTo(x + 57, y-14 );
+        context.closePath();
+        context.fill();
+    </script>
+</body>
+
+</html>

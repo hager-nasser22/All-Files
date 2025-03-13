@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="./music.mp3" controls id="audio"></audio>
+    <button id="play" onclick="play()">Play</button>
+    <button id="pause" onclick="pause()">Pause</button>
+    <button id="stop" onclick="stop()">Stop</button>
+    <button id="mute" onclick="mute()">Mute</button>
+    <input type="range" name="volume" id="volume" min="0" max="1" step="0.1">
+    <select name="speed" id="speed">
+        <option value="1">1</option>
+        <option value="1.5">1.5</option>
+        <option value="1.75">1.75</option>
+        <option value="2">2</option>
+    </select>
+    <input type="range" name="time" id="time" min="0" step="0.1">
+    <script src="./assets/js/audio.js"></script>
+</body>
+</html>
