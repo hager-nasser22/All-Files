@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <h1>Press Key</h1>
+
+    <script>
+        document.addEventListener("keydown" , function (){
+            alert(`key : ${event.key} \n code : ${event.keyCode}`);
+            if (event.altKey) {
+                alert("Alt key is pressed.");
+            }
+            if (event.ctrlKey) {
+                alert("Ctrl key is pressed.");
+            }
+            if (event.shiftKey) {
+                alert("Shift key is pressed.");
+            }
+        });
+        document.addEventListener("contextmenu" , function (){
+            event.preventDefault();
+            alert("Right-click context menu is disabled.");
+        });
+    </script>
+</body>
+</html>

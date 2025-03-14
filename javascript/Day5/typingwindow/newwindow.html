@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Flying Task</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <p id="message"></p>
+    <script>
+var count = 0;
+var messageElement = document.getElementById("message");
+var message = "hello in world";
+    var index = 0;
+    messageElement.textContent = "";
+        var interval = setInterval(function (){
+            if(index < message.length){
+                messageElement.textContent += message[index];
+                index++;
+            }else{
+                clearInterval(interval);
+                window.close();
+            }
+        },1000);
+    </script>
+</body>
+
+</html>

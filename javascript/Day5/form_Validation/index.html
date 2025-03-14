@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Flying Task</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div class="parent">
+
+        <form action="" method="get" onsubmit="login(event)">
+            <input type="text" name="fullName" id="fullName" placeholder="Enter Your Name">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+            <div class="input-form">
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" id="male" value="male">Male
+                <input type="radio" name="gender" id="female" value="female">Female
+            </div>
+            <div class="input-form">
+                <label for="sport">Sport</label>
+                <input type="checkbox" name="tennis" id="tennis" value="tennis" >Tennis
+                <input type="checkbox" name="running" id="running" value="running">Running
+                <input type="checkbox" name="football" id="football" value="football">Football
+            </div>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="egypt">Egypt</option>
+                <option value="kanada">Kanada</option>
+            </select>
+            <button type="submit" id="btnSubmit">Submit</button>
+            <button id="btnReset" onclick="resetAll">Reset</button>
+        </form>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

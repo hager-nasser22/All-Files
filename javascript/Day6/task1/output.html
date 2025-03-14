@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="content"></div>
+
+    <script>
+        window.onload = function () {
+
+            const name = getCookie("name");
+            const email = getCookie("email");
+            const color = getCookie("color");
+            console.log(document.cookie);
+            let counter = parseInt(getCookie("counter") || "0");
+            counter++;
+            saveCookie("counter", counter);
+            const contentDiv = document.getElementById("content");
+
+            contentDiv.innerHTML = `
+                <p style="color: ${color};"> ${name}</p>
+                <p>Email: ${email}</p>
+                <p style="color: ${color};"> ${counter}</p>
+            `;
+            const img = document.createElement("img");
+            const gender = getCookie("gender");
+
+            if (gender === "male") {
+                img.setAttribute("src", "./assets/images/1.jpg");
+            } else if (gender === "female") {
+                img.setAttribute("src", "./assets/images/2.jpg");
+            }
+            contentDiv.appendChild(img);
+        };
+
+
+        function getCookie(key) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [k, v] = cookie.trim().split('=');
+                if (k === key) return v;
+            }
+            return '';
+        }
+
+        function saveCookie(key, value) {
+            const expireDate = new Date();
+            expireDate.setDate(expireDate.getDate() + 3);
+            document.cookie = `${key}=${value};expires=${expireDate.toUTCString()};path=/`;
+        }
+    </script>
+</body>
+
+</html>
