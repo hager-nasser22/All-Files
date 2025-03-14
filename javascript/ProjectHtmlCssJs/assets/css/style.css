@@ -1,0 +1,797 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    height: 1000px;
+}
+.container{
+    width:70%;
+    margin: auto;
+}
+@font-face {
+    font-family: 'Heebo';
+    src: url(../fonts/Heebo-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+/* /////////contact//////////////// */
+.contact{
+    background-color: #f6f6f6;
+    padding:10px 0px;
+    font-size: 11px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #4a4a4a;
+}
+.contact .contact-info{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.contact ul li:not(:last-child){
+    border-right: 1px solid #797979;
+    padding-right: 20px;
+}
+.contact ul li:last-child , .contact ul:last-child li:nth-child(2){
+    padding-left: 20px;
+}
+.contact ul:last-child li a{
+    text-decoration: none;
+    color: #4a4a4a;
+}
+.contact ul:last-child li a:hover , nav .nav-content ul li a:hover{
+    color: #71cd14;
+    transition: color 0.3s ease-in-out;
+}
+/* //////////////navbar///////////////// */
+nav{
+    background-color: white;
+    width: 100%;
+    z-index: 5;
+}
+nav .nav-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    font-family:"Heebo" ;
+    font-weight: 400;
+    font-size: 13px;
+}
+nav .nav-content ul li{
+    padding-right: 30px;
+}
+nav .nav-content ul li:last-child{
+    padding-right: 0px;
+}
+nav .nav-content ul li a{
+    text-decoration: none;
+    color: #2a2a2a;
+}
+nav .nav-content .links , nav .nav-content .icons{
+    padding-top: 20px;
+}
+nav .nav-content .links ul li:first-child a{
+    color: #71cd14;
+}
+/* ////////////////header////////////////////// */
+
+.header{
+    background-image: url("../images/banner-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    color: white;
+    font-family: 'Roboto';
+}
+.header .container{
+    padding-top: 15%;
+}
+.header h3 , .header a{
+    text-transform: uppercase;
+}
+.header h1{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 52px;
+    padding-bottom: 20px;
+}
+.header h1 span{
+    color: #71cd14;
+}
+.header p{
+    font-family:"Heebo" ;
+    font-weight: 300;
+    font-size: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 45px;
+}
+.header h3 {
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 20px;
+    
+}
+.header a {
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 15px 40px;
+    background-color: #71cd14;
+    border-radius: 7px;
+    margin-top: 40px;
+    border: 1px solid #71cd14;
+}
+.header a:hover{
+    color: #71cd14;
+    
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+/* /////////////////services/////////////////// */
+.services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 280px;
+}
+.services div{
+    width: 100%;
+}
+.services div a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0px;
+    text-decoration: none;
+}
+.services div svg{
+    color: #4a4a4a;
+    font-size: 24px;
+    font-weight: 500;
+    display: block;
+}
+.services div a h3{
+    font-weight: 500;
+    font-size: 15px;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    padding: 25px 0px 10px 0px;
+}
+.services div p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    color: #797979;
+}
+.services div a:hover{
+    transition: all .3s ease-in-out;
+    box-shadow: 1px 1px 9px 1px #71cd14, -1px -1px 9px 1px #71cd14;
+}
+.services div a:hover h3 , .services div a:hover p , .services div a:hover svg{
+    transition: all .2s ease-in-out;
+}
+/* /////////////////feature-product//////////////////// */
+.feature-product{
+    height: 750px;
+    padding-top: 20px;
+}
+.feature-product .container h2{
+    font-weight: 700;
+    font-size: 24px;
+    font-family:"Heebo" ;
+    color:#2a2a2a;
+    text-transform: uppercase;
+    padding: 20px 0px 10px 0px;
+    width: 21.8%;
+    margin: auto;
+    border-bottom: 1px solid #ebedee;
+}
+.feature-product .container > p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    color: #797979;
+    text-align: center;
+    padding: 20px 0px ;
+}
+.feature-product .feature-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.feature-product .feature-content img{
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.feature-product .feature-content > div{
+    width:calc(93%/3);
+    border: 1px solid #f0f2f1;;
+    padding-bottom: 20px;
+    position: relative;
+    /* bottom: 250; */
+    transform: translateY(400px);
+    opacity: 0;
+}
+.feature-product .feature-content > div > a{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Heebo" ;
+    color:#4a4a4a;
+    text-transform: uppercase;
+    padding:20px;
+    text-decoration: none;
+}
+.feature-product .feature-content>  div h6{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+.feature-product .feature-content > div h6 del{
+    padding-left: 30px;
+    font-size: 14px;
+    font-family:"Heebo" ;
+    color: #797979;
+    font-weight: 400;
+}
+.feature-product .feature-content .icons{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 22.5%;
+    background-color: rgba(113,205,20,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.feature-product .feature-content >div:hover .icons{
+    opacity: 1;
+    height: 15%;
+    transition: all .3s ease-in-out;
+}
+.feature-product .feature-content .icons ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+.feature-product .feature-content .icons ul li a{
+    background-color: white;
+    color: #2a2a2a;
+    padding: 10px;
+    border-radius: 50%;
+}
+.feature-product .feature-content .icons ul li a:hover{
+    background-color: #71cd14;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.feature-product .feature-content >div:hover > a{
+    color: #71cd14;
+}
+/* /////////////////new product/////////////////////// */
+.sale{
+    background-image: url(../images/offer-bg.png);
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+.sale .container{
+    top: 25%;
+    width: fit-content;
+    position: absolute;
+    right: 25%;
+    text-align: center;
+}
+.sale .container h3{
+    font-size: 24px;
+    font-family:"Heebo" ;
+    color: #4a4a4a;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.sale .container h2{
+    font-size: 100px;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.sale a {
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 15px 40px;
+    background-color: #71cd14;
+    border-radius: 7px;
+    margin-top: 40px;
+    border: 1px solid #71cd14;
+    text-transform: uppercase;
+    font-family:"Roboto" ;
+    
+}
+.sale a:hover{
+    color: #71cd14;
+    
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+.sale .container p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    margin-top: 40px;
+}
+/* /////////////////new product/////////////////////// */
+.new-product{
+    width: 100%;
+    height:1050px;
+    margin-top: 90px;
+}
+.new-product .new-content{
+    display: flex;
+    gap:2%;
+    height:60%;
+    padding-top: 40px;
+}
+.new-product .container h2{
+    font-weight: 700;
+    font-size: 24px;
+    font-family:"Heebo" ;
+    color:#2a2a2a;
+    text-transform: uppercase;
+    padding: 20px 0px 10px 0px;
+    width: 17.1%;
+    margin: auto;
+    border-bottom: 1px solid #ebedee;
+}
+.new-product .container > p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    color: #797979;
+    text-align: center;
+    padding: 20px 0px ;
+}
+.new-product .new-content >div{
+    width: calc(98%/2);
+    
+}
+.new-product .new-content .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+.new-product .new-content .left img{
+    width: 100%;
+}
+.new-product .new-content .left .top h6{
+    font-size: 20px;
+    font-weight: 500;
+    font-family:"Heebo" ;
+    color: #4a4a4a;
+}
+.new-product .new-content .left .top h3{
+    font-size: 32px;
+    font-weight: 700;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    text-transform: uppercase;
+}
+.new-product .new-content .left .bottom p{
+    font-size: 30px;
+    font-weight: 400;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.new-product .new-content .left .bottom a {
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 15px 40px;
+    background-color: #71cd14;
+    border-radius: 7px;
+    margin-top: 40px;
+    border: 1px solid #71cd14;
+}
+.new-product .new-content .left .bottom a:hover{
+    color: #71cd14;
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+.new-product .new-content .right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.new-product .new-content .right >div{
+    width: calc(95%/2);
+    border: 1px solid #f0f2f1;;
+    padding-bottom: 20px;
+    position: relative;
+}
+.new-product .new-content .right >div:nth-child(1),.new-product .new-content .right >div:nth-child(2){
+    margin-bottom: 50px;
+}
+.new-product .new-content .right img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.new-product .new-content .icons{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 31.5%;
+    background-color: rgba(113,205,20,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.new-product .new-content .right >div:hover .icons{
+    opacity: 1;
+    height: 15%;
+    transition: all .3s ease-in-out;
+}
+.new-product .new-content .right .icons ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+.new-product .new-content .icons ul li a{
+    background-color: white;
+    color: #2a2a2a;
+    padding: 10px;
+    border-radius: 50%;
+}
+.new-product .new-content .icons ul li a:hover{
+    background-color: #71cd14;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.new-product .new-content .right >div:hover > a{
+    color: #71cd14;
+}
+.new-product .new-content .right > div > a{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Heebo" ;
+    color:#4a4a4a;
+    text-transform: uppercase;
+    padding:20px;
+    text-decoration: none;
+}
+.new-product .new-content .right >  div h6{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+.new-product .new-content .right > div h6 del{
+    padding-left: 30px;
+    font-size: 14px;
+    font-family:"Heebo" ;
+    color: #797979;
+    font-weight: 400;
+}
+
+
+/* /////////////////inspire-product//////////////////// */
+.inspire-product{
+    height: 1050px;
+    padding-top: 20px;
+}
+.inspire-product .container h2{
+    font-weight: 700;
+    font-size: 24px;
+    font-family:"Heebo" ;
+    color:#2a2a2a;
+    text-transform: uppercase;
+    padding: 20px 0px 10px 0px;
+    width: 20.8%;
+    margin: auto;
+    border-bottom: 1px solid #ebedee;
+}
+.inspire-product .container > p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    color: #797979;
+    text-align: center;
+    padding: 20px 0px ;
+}
+.inspire-product .inspire-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    flex-wrap: wrap;
+}
+.inspire-product .inspire-content img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.inspire-product .inspire-content > div{
+    width:calc(93%/4);
+    border: 1px solid #f0f2f1;;
+    padding-bottom: 20px;
+    position: relative;
+}
+.inspire-product .inspire-content > div > a{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Heebo" ;
+    color:#4a4a4a;
+    text-transform: uppercase;
+    padding:20px;
+    text-decoration: none;
+}
+.inspire-product .inspire-content>  div h6{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family:"Heebo" ;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+.inspire-product .inspire-content > div h6 del{
+    padding-left: 30px;
+    font-size: 14px;
+    font-family:"Heebo" ;
+    color: #797979;
+    font-weight: 400;
+}
+.inspire-product .inspire-content .icons{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 28.2%;
+    background-color: rgba(113,205,20,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.inspire-product .inspire-content >div:hover .icons{
+    opacity: 1;
+    height: 15%;
+    transition: all .3s ease-in-out;
+}
+.inspire-product .inspire-content .icons ul{
+    display: flex;
+    list-style: none;
+    gap:20px;
+}
+.inspire-product .inspire-content .icons ul li a{
+    background-color: white;
+    color: #2a2a2a;
+    padding: 10px;
+    border-radius: 50%;
+}
+.inspire-product .inspire-content .icons ul li a:hover{
+    background-color: #71cd14;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.inspire-product .inspire-content >div:hover > a{
+    color: #71cd14;
+}
+/* ///////////////blog/////////////////////// */
+.blog-product .container h2{
+    font-weight: 700;
+    font-size: 24px;
+    font-family:"Heebo" ;
+    color:#2a2a2a;
+    text-transform: uppercase;
+    padding: 20px 0px 10px 0px;
+    width: 14.3%;
+    margin: auto;
+    border-bottom: 1px solid #ebedee;
+}
+.blog-product .container > p{
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    color: #797979;
+    text-align: center;
+    padding: 20px 0px ;
+}
+.blog-product .blog-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    height: 550px;
+}
+.blog-product .blog-content .image{
+    width:100%;
+    overflow: hidden;
+    height: 50%;
+    margin-bottom: 35px;
+}
+.blog-product .blog-content img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    transition: transform .5s ease-in-out;
+}
+.blog-product .blog-content > div{
+    width:calc(93%/3);
+    padding-bottom: 20px;
+    position: relative;
+}
+.blog-product .blog-content > div:hover img{
+    transform:scale(1.2);
+}
+.blog-product .blog-content > div .admin{
+    font-weight: 300;
+    font-size: 14px;
+    font-family:"Roboto" ;
+    color: #797979;
+    text-transform: capitalize;
+    text-decoration: none;
+    
+    
+}
+.blog-product .blog-content > div .admin svg{
+    margin: 0px 5px 0px 30px;
+}
+.blog-product .blog-content > div h4{
+    font-weight: 500;
+    font-size: 20px;
+    font-family:"Heebo" ;
+    color:#2a2a2a;
+    padding:20px 0px;
+}
+.blog-product .blog-content > div >p{
+    font-weight: 400;
+    font-size: 15px;
+    font-family:"Roboto" ;
+    color: #797979;
+    padding:0px 0px 20px 0px;
+}
+.blog-product .blog-content > div a:last-child{
+    font-weight: 500;
+    font-size: 12px;
+    font-family:"Roboto" ;
+    color:#2a2a2a;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.blog-product .blog-content > div a:last-child svg{
+    padding-left: 10px;
+    transform: scaleX(1.5);
+}
+.blog-product .blog-content > div:hover a{
+    color: #71cd14;
+    transition: color .3s ease-in-out;
+}
+.blog-product .blog-content > div:hover a:last-child svg{
+    transform: scaleX(2);
+    transition: transform .3s ease-in-out;
+}
+/* //////////////////footer//////////////////// */
+footer{
+    width: 100%;
+    height:250px;
+    background-color: #0d0d1f;
+    padding: 7% 0px;
+}
+footer h3{
+    font-size: 18px;
+    font-weight: 500;
+    font-family:"Heebo" ;
+    color: white;
+    padding-bottom: 15px;
+}
+footer a{
+    font-size: 14px;
+    font-weight: 400;
+    font-family:"Roboto" ;
+    color: #797979;
+    text-decoration: none;
+}
+footer a:hover{
+    color: white;
+    transition: color .3s ease-in-out;
+}
+footer ul li{
+    padding-top: 20px;
+}
+footer .top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+footer .top div:last-child li p{
+    color: #797979;
+    font-family:"Roboto" ;
+    font-size: 14px;
+    font-weight: 400;
+}
+footer .top div:last-child li input{
+    background-color: rgba(255,255,255,0.15);
+    padding: 15px 10px;
+    border: none;
+    width: 80%;
+}
+footer .top div:last-child li input::placeholder{
+    color: #797979;
+    font-weight: 300;
+    font-size: 14px;
+    font-family:"Roboto" ;
+}
+footer .top div:last-child ul li:last-child{
+    position: relative;
+}
+footer .top div:last-child li a{
+    position: absolute;
+    right:0;
+    top: 40%;
+    background-color: #71cd14;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family:"Roboto" ;
+}
+footer .top div:last-child li a:hover{
+    color: #71cd14;
+    background-color: transparent;
+    transition: color .3s ease-in-out;
+    border: 1px solid #71cd14;
+}
+footer .bottom{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    font-family:"Roboto" ;
+}
+footer .bottom a{
+    color: white;
+    padding: 10px 15px;
+    background-color: #313140;
+    transition: all .3s ease-in-out;
+}
+footer .bottom a:hover{
+    background-color: #71cd14;
+    color: white;
+}
+/* ///////////////////////////////////////////// */
+/* .contact ul , .contact ul li , nav .nav-content ul li{
+    display: inline-block;
+} */
+
+@keyframes animat {
+    from{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.feature-product .feature-content > div{
+    /* transition: animation .2s ease-in-out; */
+}
